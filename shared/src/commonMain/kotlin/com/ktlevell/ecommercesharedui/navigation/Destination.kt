@@ -6,33 +6,10 @@ import com.ktlevell.ecommercesharedui.theme.Resources
 import org.jetbrains.compose.resources.painterResource
 import kotlinx.serialization.Serializable
 
+@Serializable
 sealed interface Destination {
     val isTopLevelDestination: Boolean
     val title: String? get() = null
-
-    @Serializable
-    data object Home : Destination {
-        override val isTopLevelDestination = true
-        override val title = "Home"
-    }
-
-    @Serializable
-    data object Category : Destination {
-        override val isTopLevelDestination = true
-        override val title = "Category"
-    }
-
-    @Serializable
-    data object Favorite : Destination {
-        override val isTopLevelDestination = true
-        override val title = "Favorites"
-    }
-
-    @Serializable
-    data object Me : Destination {
-        override val isTopLevelDestination = true
-        override val title = "Me"
-    }
 
     companion object {
         @Composable
@@ -55,12 +32,35 @@ sealed interface Destination {
             }
         }
 
-        val drawerDestinations = listOf(
+        val drawerDestinations = listOf<Destination>(
             Home,
             Category,
             Favorite,
             Me
         )
     }
+}
 
+@Serializable
+data object Home : Destination {
+    override val isTopLevelDestination = true
+    override val title = "Home"
+}
+
+@Serializable
+data object Category : Destination {
+    override val isTopLevelDestination = true
+    override val title = "Category"
+}
+
+@Serializable
+data object Favorite : Destination {
+    override val isTopLevelDestination = true
+    override val title = "Favorites"
+}
+
+@Serializable
+data object Me : Destination {
+    override val isTopLevelDestination = true
+    override val title = "Me"
 }

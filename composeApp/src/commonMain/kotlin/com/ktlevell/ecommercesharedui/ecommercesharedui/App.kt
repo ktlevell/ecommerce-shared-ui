@@ -14,7 +14,6 @@ fun App() {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .safeDrawingPadding()
         ) {
             AppNavHost()
         }

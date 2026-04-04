@@ -115,6 +115,7 @@
 			mainGroup = 78049CAB5DEF73A0F55BEDD5;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				529945522F8090750054AD46 /* XCRemoteSwiftPackageReference "ecommerce-shared-ui" */,
 				529945602F80A7AA0054AD46 /* XCLocalSwiftPackageReference "../Shared-SPM" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -178,7 +179,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7YM4V9JVUZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
@@ -272,7 +272,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 7YM4V9JVUZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
@@ -381,6 +380,16 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		529945522F8090750054AD46 /* XCRemoteSwiftPackageReference "ecommerce-shared-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ktlevell/ecommerce-shared-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 33CFB089B209C729333B53EC /* Project object */;
 }
