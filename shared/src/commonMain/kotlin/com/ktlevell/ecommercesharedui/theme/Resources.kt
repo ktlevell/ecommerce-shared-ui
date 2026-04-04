@@ -8,9 +8,11 @@ import ecommercesharedui.shared.generated.resources.ic_category
 import ecommercesharedui.shared.generated.resources.ic_filter
 import ecommercesharedui.shared.generated.resources.ic_heart
 import ecommercesharedui.shared.generated.resources.ic_home
+import ecommercesharedui.shared.generated.resources.ic_menu
 import ecommercesharedui.shared.generated.resources.ic_profile
 import ecommercesharedui.shared.generated.resources.ic_search
 import ecommercesharedui.shared.generated.resources.ic_shopping_cart
+import ecommercesharedui.shared.generated.resources.ic_start
 import ecommercesharedui.shared.generated.resources.ic_sub
 import ecommercesharedui.shared.generated.resources.im_mastercard
 import ecommercesharedui.shared.generated.resources.im_momo
@@ -30,6 +32,8 @@ object Resources {
             val Profile = Res.drawable.ic_profile
             val Search = Res.drawable.ic_search
             val ShoppingCart = Res.drawable.ic_shopping_cart
+            val Menu = Res.drawable.ic_menu
+            val Start = Res.drawable.ic_start
         }
     }
 
