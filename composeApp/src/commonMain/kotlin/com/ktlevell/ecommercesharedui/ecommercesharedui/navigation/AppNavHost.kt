@@ -22,6 +22,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.ktlevell.ecommercesharedui.ecommercesharedui.features.home.HomeRoot
 import com.ktlevell.ecommercesharedui.ecommercesharedui.features.home.HomeScreen
 import com.ktlevell.ecommercesharedui.navigation.BottomBar
 import com.ktlevell.ecommercesharedui.navigation.Category
@@ -91,7 +92,7 @@ fun AppNavHost() {
                     modifier = Modifier.padding(paddingValues)
                 ) {
                     composable<Home> {
-                        HomeScreen()
+                        HomeRoot()
                     }
                     composable<Category> {
 
