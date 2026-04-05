@@ -35,6 +35,7 @@ fun HomeContent(
                 title = it.title,
                 subtitle = it.subtitle,
                 discount = it.discount,
+                onClick = onPromotionClick
             )
         }
 

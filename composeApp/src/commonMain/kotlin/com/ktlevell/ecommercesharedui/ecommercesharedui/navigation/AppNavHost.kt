@@ -85,23 +85,24 @@ fun AppNavHost() {
                         .fillMaxSize()
                         .padding(paddingValues)
                         .consumeWindowInsets(paddingValues)
-                ) {}
-                NavHost(
-                    navController = navController,
-                    startDestination = Home,
-                    modifier = Modifier.padding(paddingValues)
                 ) {
-                    composable<Home> {
-                        HomeRoot()
-                    }
-                    composable<Category> {
+                    NavHost(
+                        navController = navController,
+                        startDestination = Home,
+                        modifier = Modifier
+                    ) {
+                        composable<Home> {
+                            HomeRoot()
+                        }
+                        composable<Category> {
 
-                    }
-                    composable<Favorite> {
+                        }
+                        composable<Favorite> {
 
-                    }
-                    composable<Me> {
+                        }
+                        composable<Me> {
 
+                        }
                     }
                 }
             }

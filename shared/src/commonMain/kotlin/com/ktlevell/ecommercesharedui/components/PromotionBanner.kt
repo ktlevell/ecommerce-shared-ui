@@ -40,12 +40,14 @@ fun PromotionBanner(
     title: String,
     discount: Int,
     subtitle: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
 ) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(200.dp),
+            .height(175.dp)
+        ,
         shape = RoundedCornerShape(24.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
@@ -64,7 +66,7 @@ fun PromotionBanner(
                 modifier = Modifier
                     .size(240.dp)
                     .align(Alignment.CenterEnd)
-                    .offset(x = 40.dp, y = 20.dp),
+                    .offset(x = 40.dp, y = 5.dp),
                 contentScale = ContentScale.Fit
             )
 
@@ -84,7 +86,7 @@ fun PromotionBanner(
                 Text(
                     text = "$discount% Off",
                     color = Color(0xFFF7B559),
-                    style = MaterialTheme.typography.displayLarge,
+                    style = MaterialTheme.typography.displayMedium,
                     fontWeight = FontWeight.Black
                 )
 
@@ -98,13 +100,12 @@ fun PromotionBanner(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Button(
-                    onClick = {  },
+                    onClick = { onClick() },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFFF7B559),
                         contentColor = Color.White
                     ),
                     shape = RoundedCornerShape(12.dp),
-                    contentPadding = PaddingValues(horizontal = 24.dp)
                 ) {
                     Text(
                         text = "Get",
@@ -112,6 +113,7 @@ fun PromotionBanner(
                         fontWeight = FontWeight.Bold
                     )
                 }
+
             }
         }
     }
@@ -127,7 +129,8 @@ fun PromotionBannerPreview(
         PromotionBanner(
             title = "Black Friday",
             subtitle = "All products",
-            discount = 20
+            discount = 20,
+            onClick = {}
         )
     }
 }
