@@ -36,7 +36,7 @@ import ecommercesharedui.shared.generated.resources.im_discount
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun DiscountBanner(
+fun PromotionBanner(
     title: String,
     discount: Int,
     subtitle: String,
@@ -120,11 +120,11 @@ fun DiscountBanner(
 
 @Composable
 @Preview
-fun DiscountBannerPreview(
+fun PromotionBannerPreview(
 
 ) {
     AppTheme {
-        DiscountBanner(
+        PromotionBanner(
             title = "Black Friday",
             subtitle = "All products",
             discount = 20

@@ -37,29 +37,47 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.ktlevell.ecommercesharedui.theme.B010
 import com.ktlevell.ecommercesharedui.theme.Black
 import com.ktlevell.ecommercesharedui.theme.DC0100
 import com.ktlevell.ecommercesharedui.theme.EarbudsCategoryColor
+import com.ktlevell.ecommercesharedui.theme.GreenProductBackground
 import com.ktlevell.ecommercesharedui.theme.NC20
 import com.ktlevell.ecommercesharedui.theme.NC30
+import com.ktlevell.ecommercesharedui.theme.OrangeProductBackground
 import com.ktlevell.ecommercesharedui.theme.PrimaryColor
+import com.ktlevell.ecommercesharedui.theme.PurpleProductBackground
 import com.ktlevell.ecommercesharedui.theme.Resources
 import com.ktlevell.ecommercesharedui.theme.WC080
 import com.ktlevell.ecommercesharedui.theme.White
+import com.ktlevell.ecommercesharedui.theme.WhiteProductBackground
+import com.ktlevell.ecommercesharedui.theme.YellowProductBackground
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun ProductCard(
     productName: String,
     brandName: String,
-    thumbnail: Any,
+    thumbnail: String,
     price: Double,
     rating: Double,
+    color: String,
     onCardClick: () -> Unit,
     onAddClick: () -> Unit,
     modifier: Modifier = Modifier,
     isFavorite: Boolean = false
 ) {
+
+    val backgroundColor = when(color) {
+        "white" -> WhiteProductBackground
+        "green" -> GreenProductBackground
+        "orange" -> OrangeProductBackground
+        "yellow" -> YellowProductBackground
+        "purple" -> PurpleProductBackground
+        else -> B010
+    }
+
+
     Card(
         modifier = modifier
             .width(240.dp)
@@ -90,7 +108,7 @@ fun ProductCard(
                     .width(190.dp)
                     .height(190.dp)
                     .clip(RoundedCornerShape(20.dp))
-                    .background(EarbudsCategoryColor)
+                    .background(backgroundColor)
                 ,
                 contentAlignment = Alignment.Center
             ) {
@@ -221,10 +239,11 @@ fun ProductCardPreview() {
     ProductCard(
         productName = "Harden Vol. 6",
         brandName = "Adidas",
-        thumbnail = "/Volumes/Projects/Ecommerce-Shared-UI/shared/src/commonMain/composeResources/drawable/im_nikee.webp",
+        thumbnail = "/Volumes/Projects/Ecommerce-Shared-UI/shared/src/commonMain/composeResources/drawable/nike-air-lv8.webp",
         price = 90.00,
         rating = 5.0,
         onCardClick = {},
-        onAddClick = {}
+        onAddClick = {},
+        color = "green"
     )
 }

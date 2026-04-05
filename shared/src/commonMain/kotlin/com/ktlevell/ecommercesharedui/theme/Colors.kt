@@ -93,3 +93,9 @@ val IF0000 = Color(0xFFF3FAFE)
 val MedicineCategoryColor = Color(0xFFFFC9E9)
 val EarbudsCategoryColor = Color(0xFF9FFCC4)
 val EletronicCategoryColor = Color(0xFF7BDFFF)
+
+val YellowProductBackground = Color(0xFFFCF7DE)
+val WhiteProductBackground = B010
+val GreenProductBackground = Color(0xFFDEFDE0)
+val PurpleProductBackground = Color(0xFFF0EAFF)
+val OrangeProductBackground = Color(0xFFFFDBA4)
